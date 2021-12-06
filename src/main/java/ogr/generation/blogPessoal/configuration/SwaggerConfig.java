@@ -45,7 +45,9 @@ public class SwaggerConfig {
 				.description("Projeto API Spring - Blog Pessoal")
 				.version("1.0.0")
 				.license("apache license version 2.0")
-				.licenseUrl("https://github.com/Camibaza/turma37gen/tree/main/blogPessoal/blogPessoal")
+				
+				
+				.licenseUrl("https://github.com/Camibaza/API_BlogPessoal")
 				.contact(contact())
 				.build();
 	}

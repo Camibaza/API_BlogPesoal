@@ -45,7 +45,7 @@ public class Postagem {
 	@ManyToOne
 	@JoinColumn(name = "usuario_id")
 	@JsonIgnoreProperties({"minhasPostagens"})
-	private Usuario criador;
+	private Usuario usuario;
 
 	public long getId() {
 		return id;
@@ -87,13 +87,15 @@ public class Postagem {
 		this.tema = tema;
 	}
 
-	public Usuario getCriador() {
-		return criador;
+	public Usuario getUsuario() {
+		return usuario;
 	}
 
-	public void setCriador(Usuario criador) {
-		this.criador = criador;
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
+
+
 	
 
 
