@@ -83,8 +83,6 @@ public class UsuarioService {
 	}
 	
 
-	public @Valid Optional<UserLogin> UserLogin(@Valid Optional<UserLogin> user) {
-		
-		return null;
-	}
+	 
+	
 }
