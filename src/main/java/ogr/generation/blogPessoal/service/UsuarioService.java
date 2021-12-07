@@ -3,8 +3,6 @@ package ogr.generation.blogPessoal.service;
 import java.nio.charset.Charset;
 import java.util.Optional;
 
-import javax.validation.Valid;
-
 import org.apache.commons.codec.binary.Base64;
 
 import org.springframework.beans.factory.annotation.Autowired;

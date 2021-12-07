@@ -10,7 +10,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -35,21 +34,26 @@ public class Usuario {
 	@NotNull
 	@Size(min = 3, max = 100)
 	private String senha;
-	
+
 	@Size(min = 0, max = 100)
 	private String foto;
-	
+
 	private String tipo;
-	
+
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
-	@JsonIgnoreProperties({"usuario"})
+	@JsonIgnoreProperties({ "usuario" })
 	private List<Postagem> minhasPostagens = new ArrayList<>();
 
+	@Deprecated
+	public Usuario() {
+		super();
+	}
+
 	public Usuario(String nome, String usuario, String senha) {
-		this.nome=nome;
-		this.usuario=usuario;
-		this.senha=senha;
-	
+		this.nome = nome;
+		this.usuario = usuario;
+		this.senha = senha;
+
 	}
 
 	public long getId() {
@@ -107,7 +111,5 @@ public class Usuario {
 	public void setMinhasPostagens(List<Postagem> minhasPostagens) {
 		this.minhasPostagens = minhasPostagens;
 	}
-
-	
 
 }
