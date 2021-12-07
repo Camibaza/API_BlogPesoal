@@ -33,7 +33,7 @@ public class UsuarioController {
 	@Autowired
 	private UsuarioRepository repository;
 	
-	@GetMapping
+	@GetMapping("/all")
 	public ResponseEntity <List<Usuario>> getAll() {
 	        return ResponseEntity.ok(repository.findAll());
 	}
